@@ -5,20 +5,15 @@ public class Rectangle extends Quadrilateral implements Shape{
 	
 	public Rectangle(double length, double width){
 		super(length,width,length,width);
+		if (length<0 || width<0){length=Double.NaN;width=Double.NaN;}
 		this.length=length;
 		this.width=width;
 	}
 	
 	@Override
 	public double getArea() {
-		// TODO Auto-generated method stub
-		return length*width;
+		return this.length*this.width;
 	}
 
-//	@Override
-//	public double getPerimeter() {
-//		// TODO Auto-generated method stub
-//		return (2*length)+(2*width);
-//	}
 
 }
